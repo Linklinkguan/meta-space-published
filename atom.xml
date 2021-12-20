@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Link the World</title>
+  
+  <subtitle>Link you</subtitle>
+  <link href="https://linklinkguan6.metaspaces.life/atom.xml" rel="self"/>
+  
+  <link href="https://linklinkguan6.metaspaces.life/"/>
+  <updated>2021-12-20T04:06:03.063Z</updated>
+  <id>https://linklinkguan6.metaspaces.life/</id>
+  
+  <author>
+    <name>林可</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Using Splits with Auctions</title>
+    <link href="https://linklinkguan6.metaspaces.life/2021/12/20/Using-Splits-with-Auctions/"/>
+    <id>https://linklinkguan6.metaspaces.life/2021/12/20/Using-Splits-with-Auctions/</id>
+    <published>2021-12-20T04:06:03.000Z</published>
+    <updated>2021-12-20T04:06:03.063Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Splits</h1><p>Splits on Mirror are a way to automatically share the value you produce with multiple entities. A split is a payable smart contract that routes value to multiple addresses on Ethereum.</p><p>Splits can be used as a way to reward your collaborators, the people that have inspired you, or to donate proceeds from your work.</p><p>Create a split by going to the Splits tab in your dashboard. A split needs to be made between at least two addresses and the percentages must add up to 100%.</p><p><em>Warning: Splits currently only work with ETH. Sending ERC-20 tokens to splits will cause them to be permanently locked.</em></p><h2 id="Using-Splits-with-Auctions">Using Splits with Auctions</h2><p>Splits can be easily composed with other value-producing blocks on Mirror, such as Auctions. Instead of keeping all the proceeds from an auction for yourself, you can split it with multiple entities.</p><p>First, create a split in the Splits section of your dashboard. After the split is deployed, copy the split’s address. Now, create a new auction and paste the split address into the Funds Recipient field.</p><p>When the Auction is over, funds will be automatically shared between the recipients specified in the split contract.</p><p>Splits can also receive ETH outside of Mirror, like any payable smart contract or EOA.</p><hr> IPFS: <a href='https://meta-network-data-viewer.vercel.app/ipfs/bafybeicndgqsotph4v7cxgeugwteomopz7sojnknspcp622xop4ztfpnd4' rel='external meta-network-dataviewer' target='_blank'>bafybeicndgqsotph4v7cxgeugwteomopz7sojnknspcp622xop4ztfpnd4</a>]]></content>
+    
+    
+    <summary type="html">Splits
+Splits on Mirror are a way to automatically share the value you produce with multiple enti...</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sign in With Ethereum Communit</title>
+    <link href="https://linklinkguan6.metaspaces.life/2021/12/18/Sign-in-With-Ethereum-Communit/"/>
+    <id>https://linklinkguan6.metaspaces.life/2021/12/18/Sign-in-With-Ethereum-Communit/</id>
+    <published>2021-12-18T22:03:00.000Z</published>
+    <updated>2021-12-18T22:03:00.773Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Date-2021-12-02">Date: 2021/12/02</h3><h3 id="Agenda">Agenda:</h3><ul><li>[General] Reader Notes &amp; Updates</li><li>[General] Introductions</li><li>[Show &amp; Tell] SIWE Updates</li><li>[General] Q&amp;A</li></ul><h3 id="Reader-Notes-Updates">Reader Notes &amp; Updates</h3><ul><li>SIWE library is out and can be found <a href="https://github.com/spruceid/siwe">here</a></li><li>The <a href="http://discord.gg/WjvuYqvm5Y">Discord</a> server is always open for questions and those that wish to participate.</li><li>We’re working on support for different languages and integrations, please reach out if you’re interested in a SIWE integration</li></ul><h3 id="Introductions">Introductions</h3><ul><li>[Austin Roberts] - With Rivet, normally Greg is here. The more technical counterpart of Rivet.</li><li>[Karl Mozurkewich] - Here as an independent community contributor. I work for OpenText and involved in many open source projects. We work on B2B federation exchange, OIDC heavy and we’ve had our eye on SSO integrations with DIDs for a while. It’s very exciting to see this cohort mature.</li><li>[Gene Stakhov] - I’ve been on only one of these calls several weeks back. I’m also in the ECM space and I learned about this through ConsenSys’ blockchain academy bootcamp. Still nascent in this (programming and blockchain) - however I can contribute, happy to do so!</li><li>[Caleb] - Working with a company called HID Global doing MFA. Also very much an Ethereum enthusiast on the side. Interested in following this and take what I learn and bring it into the fold at work.</li></ul><h3 id="SIWE-Updates">SIWE Updates</h3><ul><li>[Wayne] - Basically we’re going to talk about three to four things. Because we’ve resolved a lot of the comments in the GitHub issue and the conversation moving to ETHMagicians, I’m going to go over the spec from the beginning to the end. We’re not going to go too much into detail but we’re going to go over the major sections.<ul><li>The link to the pull request is on login.xyz, the discussions are on ETHMagicians. Most recently, Micah Zoltu was being thoughtful in thinking that private keys shouldn’t be considered identities but rather, identifiers. Micah wanted to make sure there was support for smart contract based wallets so we can build more sophisticated identity systems.</li><li>[Review of the SIWE spec - covering the abstract, signing request, the ABNF defined message template, contract account support, ENS resolution, and guidelines for implementers]</li><li>On previous calls we had design goal recommendations and additional functional requirements. We have achieved rough consensus on the design goals - if nobody uses it, it isn’t worth the effort. We also added a number of discussions and acknowledgments. If you’ve made contributions and aren’t seen on the specification, reach out.</li></ul></li><li>[Wayne] We’ve also created some test suites such as negative and positive tests for parsing validation. We also added a version field to adapt to a new format if needed. From the last community call we made minor changes like using a different <code>authority</code> for the domain - Sam Wilson made great comments about the intent on situations like this. Also we added a non-required but <code>should</code> suggestion to have phishing attack prevention from the wallet side.</li></ul><h4 id="Other-Language-Implementations">Other Language Implementations</h4><ul><li>[Wayne] We have two new languages being built simultaneously. We will be building the IdP in Rust, which we’ll have an implementation for, and we’re also implementing SIWE in Ruby. A lot of people use Ruby on Rails so you can <code>gem install siwe-rails</code> so people can sign into Ethereum into common Rails apps. After we figure out the final licensing we’ll make it public.</li></ul><h3 id="Q-A">Q&amp;A</h3><ul><li>[Brantly] - When merge on the EIP?<ul><li>[Wayne] We’re waiting for the maintainers and we need one more person to approve it.</li><li>[Brantly] - Thank you very much for all the work in the last mile.</li></ul></li><li>[Rocco] - Just wanted to add a note about a <a href="https://www.figma.com/community/file/1047625951123719630">Figma community component</a> that has been released. It includes two forms of the Sign-in with Ethereum button to copy and use as a component in any of your Figma design files.</li><li>[Wayne] - We want it so if anyone supports OAuth2 or OIDC should also easily allow Sign-In with Ethereum against a trusted IdP that is hosted by a neutral party. We want to make sure it’s a neutral host so we’re still discussing this but nothing stops us from getting this in a sandbox environment.<ul><li>(Chat) [Karl Mozurkewich] - If it’s written in Rust we can host it ephemerally on an edge compute service such as fastly.</li><li>A lot of Web2 account systems assume email, but Ethereum accounts have the ability to be less information revealing than Web2 systems. You can generate a new one at any time - but we want to be able to reconcile Web2 systems that need email accounts. One possible solution is already having a trusted IdP and having an Ethereum address added with an already implied email. One easy system for something like Rails, you can add an Ethereum address as a link to an existing account and allow users to sign-in with either/or.</li></ul></li><li>[Wayne] - One more update on how the thinking has progressed: it’s possible to interpret the signing as a delegation to a session key. Imagine you have a new key that you can give a reduced set of privileges to. This allows you to achieve a similar UX to Web2. It’s an interesting way to think about it.</li><li>[Tim Coulter] - I want to ask a question - I’m trying to build an application that stores user data encrypted locally in the client and optionally they can send. it to a server. If you can think of the interaction much like 1Password where you have your encrypted password data and your master password - where you can sync the encrypted data between the devices. I want your wallet to be a part of the encryption process. I don’t know if that applies to this group - what you may have just mentioned may be the answer.<ul><li>[Wayne] - I really like the direction of that. One of the limiting factors here is wallet standardization. MetaMask might be the only one to publish an encryption/decryption API as part of the model.</li><li>[Tim] - If there’s a way to pick people’s brains later, would love some time. I also posted a thread on Twitter about trying this if anyone is interested in tackling this. I saw the previous attempts at a standard which have been dropped.</li><li>[Wayne] - Coordination is the hardest part.</li><li>[Karl] - We’re kickstarting a project that’s a decentralized social media project that has an embedded wallet in a mobile app using DIDs and VCs. It’s a user-focused kind of familiar experience but we’re looking to also sign arbitrary data.</li></ul></li></ul><hr> IPFS: <a href='https://meta-network-data-viewer.vercel.app/ipfs/bafybeib324e4wpwbrdtqcz6b2gouythb3tyefhofkci2do6gjy4nfkprtm' rel='external meta-network-dataviewer' target='_blank'>bafybeib324e4wpwbrdtqcz6b2gouythb3tyefhofkci2do6gjy4nfkprtm</a>]]></content>
+    
+    
+    <summary type="html">Date: 2021/12/02
+Agenda:
+
+[General] Reader Notes &amp; Updates
+[General] Introductions
+[Show &amp; Tell] ...</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Meta Space</title>
+    <link href="https://linklinkguan6.metaspaces.life/2021/09/06/hello-meta-space/"/>
+    <id>https://linklinkguan6.metaspaces.life/2021/09/06/hello-meta-space/</id>
+    <published>2021-09-06T16:00:00.000Z</published>
+    <updated>2021-12-20T12:18:26.827Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to Meta Space!</p><h2 id="Quick-Start">Quick Start</h2><h3 id="Create-a-new-post">Create a new post</h3><p>WIP</p><h3 id="IPFS-image-sample">IPFS image sample</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Preview</span>](<span class="link">ipfs://QmQxQ2jNCjBVebYd94yoxVd9mKd5aUPLd1LGEFn9MgS4kk</span>)</span><br></pre></td></tr></table></figure><p><img src="https://ipfs.fleek.co/ipfs/QmQxQ2jNCjBVebYd94yoxVd9mKd5aUPLd1LGEFn9MgS4kk" alt="Preview"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to Meta Space!&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;Quick Start&lt;/h2&gt;
+&lt;h3 id=&quot;Create-a-new-post&quot;&gt;Create a new post&lt;/h3&gt;
+&lt;p&gt;WIP&lt;/p&gt;
+&lt;h3 id=&quot;IPF</summary>
+      
+    
+    
+    
+    <category term="Demo" scheme="https://linklinkguan6.metaspaces.life/categories/Demo/"/>
+    
+    <category term="Generated" scheme="https://linklinkguan6.metaspaces.life/categories/Demo/Generated/"/>
+    
+    
+    <category term="Meta Space" scheme="https://linklinkguan6.metaspaces.life/tags/Meta-Space/"/>
+    
+  </entry>
+  
+</feed>
